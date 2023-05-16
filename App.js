@@ -1,13 +1,18 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import Header from "./src/components/Header";
+import Login from "./src/components/Login";
 // import Lista from "./src/components/Lista";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Header />
-    </View>
+    <NavigationContainer>
+      <View style={styles.container}>
+        <Header />
+        <Login />
+      </View>
+    </NavigationContainer>
   );
 }
 
@@ -16,6 +21,5 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     backgroundColor: "gray",
-    alignItems: "center",
   },
 });

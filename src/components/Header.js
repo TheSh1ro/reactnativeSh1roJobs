@@ -4,8 +4,7 @@ const logo = require("../../assets/user.png");
 export default function Header() {
   return (
     <View style={styles.header}>
-      <Text style={styles.headerText}>ClimbingElo</Text>
-      <Text style={styles.headerText}>Home</Text>
+      <Text style={{ color: "white", fontSize: 20 }}>Sh1roJobs</Text>
       <Image source={logo} style={styles.logoImage} />
     </View>
   );
@@ -18,17 +17,14 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
     padding: 20,
     width: "100%",
-    justifyContent: "space-between",
     alignItems: "center",
-  },
-  headerText: {
+    justifyContent: "center",
     color: "white",
-    fontSize: 20,
-    cursor: "pointer",
   },
   logoImage: {
     width: 30,
     height: 30,
-    cursor: "pointer",
+    position: "absolute",
+    right: 15,
   },
 });
